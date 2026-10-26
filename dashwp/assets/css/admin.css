@@ -1,0 +1,400 @@
+/* DashWP – management page */
+
+.dashwp-admin .nav-tab-wrapper {
+	margin-bottom: 20px;
+}
+
+.dashwp-layout {
+	display: grid;
+	grid-template-columns: minmax(300px, 400px) minmax(0, 1fr);
+	gap: 20px;
+	align-items: start;
+}
+
+.dashwp-card {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
+}
+
+.dashwp-card h2 {
+	margin-top: 0;
+	font-size: 16px;
+}
+
+.dashwp-card h2 .count {
+	color: #646970;
+	font-weight: 400;
+}
+
+.dashwp-field {
+	margin: 0 0 16px;
+}
+
+.dashwp-field > label,
+.dashwp-field > legend {
+	display: block;
+	margin-bottom: 6px;
+	font-weight: 600;
+}
+
+.dashwp-field .description {
+	display: block;
+	margin-top: 6px;
+}
+
+.dashwp-field .required {
+	color: #d63638;
+}
+
+.dashwp-preview {
+	max-width: 200px;
+	margin: 0 auto 20px;
+}
+
+.dashwp-preview .dashwp-tile {
+	min-height: 150px;
+}
+
+.dashwp-icon-field {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+.dashwp-icon-current {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border: 1px solid #c3c4c7;
+	border-radius: 8px;
+	font-size: 20px;
+	background: #f6f7f7;
+}
+
+.dashwp-icon-name {
+	font-size: 11px;
+	color: #646970;
+	background: transparent;
+}
+
+.dashwp-more {
+	margin: 0 0 16px;
+	padding: 10px 12px;
+	border: 1px solid #f0f0f1;
+	border-radius: 8px;
+	background: #fcfcfc;
+}
+
+.dashwp-more summary {
+	cursor: pointer;
+	font-weight: 600;
+}
+
+.dashwp-more[open] summary {
+	margin-bottom: 14px;
+}
+
+.dashwp-roles {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+	gap: 6px 12px;
+}
+
+.dashwp-actions {
+	display: flex;
+	gap: 8px;
+	margin: 0;
+}
+
+/* List */
+
+.dashwp-list {
+	margin: 12px 0 0;
+}
+
+.dashwp-row {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin: 0 0 8px;
+	padding: 10px 12px;
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 8px;
+}
+
+.dashwp-row.is-editing {
+	border-color: #2271b1;
+	box-shadow: 0 0 0 1px #2271b1;
+}
+
+.dashwp-row.ui-sortable-helper {
+	box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
+}
+
+.dashwp-row-placeholder {
+	height: 58px;
+	margin: 0 0 8px;
+	border: 2px dashed #c3c4c7;
+	border-radius: 8px;
+	visibility: visible !important;
+}
+
+.dashwp-handle {
+	cursor: move;
+	color: #8c8f94;
+	flex: none;
+}
+
+.dashwp-row__icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex: none;
+	width: 38px;
+	height: 38px;
+	border-radius: 8px;
+	font-size: 17px;
+}
+
+.dashwp-row__text {
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	flex: 1;
+}
+
+.dashwp-row__url,
+.dashwp-row__roles {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 12px;
+}
+
+.dashwp-row__url {
+	color: #646970;
+	text-decoration: none;
+}
+
+.dashwp-row__roles {
+	color: #8c8f94;
+}
+
+.dashwp-row__actions {
+	display: flex;
+	gap: 6px;
+	flex: none;
+}
+
+.dashwp-order-status {
+	font-style: normal;
+	color: #00a32a;
+}
+
+.dashwp-order-status.is-error {
+	color: #d63638;
+}
+
+/* Settings */
+
+.dashwp-settings {
+	max-width: 900px;
+}
+
+.dashwp-toggle {
+	font-weight: 600;
+}
+
+.dashwp-settings .description {
+	margin: 4px 0 8px 24px;
+}
+
+/* Icon picker modal */
+
+.dashwp-modal[hidden] {
+	display: none;
+}
+
+.dashwp-modal {
+	position: fixed;
+	inset: 0;
+	z-index: 100000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 16px;
+}
+
+.dashwp-modal__backdrop {
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, .55);
+}
+
+.dashwp-modal__dialog {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 760px;
+	max-height: calc(100vh - 32px);
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 20px 50px rgba(0, 0, 0, .3);
+	overflow: hidden;
+}
+
+.dashwp-modal__head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 14px 18px;
+	border-bottom: 1px solid #dcdcde;
+}
+
+.dashwp-modal__head h2 {
+	margin: 0;
+	font-size: 16px;
+}
+
+.dashwp-modal__close {
+	border: 0;
+	background: none;
+	cursor: pointer;
+	color: #50575e;
+	padding: 4px;
+}
+
+.dashwp-modal__tools {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+	padding: 12px 18px;
+	border-bottom: 1px solid #f0f0f1;
+}
+
+.dashwp-modal__tabs {
+	display: flex;
+	gap: 4px;
+}
+
+.dashwp-modal__tabs .button.is-active {
+	background: #2271b1;
+	border-color: #2271b1;
+	color: #fff;
+}
+
+.dashwp-modal__search {
+	flex: 1;
+	min-width: 160px;
+}
+
+.dashwp-modal__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+	gap: 6px;
+	padding: 14px 18px;
+	overflow-y: auto;
+	flex: 1;
+	min-height: 200px;
+}
+
+.dashwp-icon-option {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 6px;
+	padding: 10px 4px;
+	border: 1px solid transparent;
+	border-radius: 8px;
+	background: #f6f7f7;
+	cursor: pointer;
+	color: #1d2327;
+	font-size: 22px;
+}
+
+.dashwp-icon-option:hover,
+.dashwp-icon-option:focus {
+	border-color: #2271b1;
+	background: #f0f6fc;
+	outline: none;
+}
+
+.dashwp-icon-option.is-selected {
+	border-color: #2271b1;
+	background: #2271b1;
+	color: #fff;
+}
+
+.dashwp-icon-option .dashicons {
+	width: 24px;
+	height: 24px;
+	font-size: 24px;
+}
+
+.dashwp-icon-option small {
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 10px;
+	line-height: 1.2;
+}
+
+.dashwp-modal__empty {
+	grid-column: 1 / -1;
+	text-align: center;
+	color: #646970;
+}
+
+.dashwp-modal__custom {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	flex-wrap: wrap;
+	padding: 12px 18px;
+	border-top: 1px solid #dcdcde;
+	background: #f6f7f7;
+	font-size: 12px;
+}
+
+.dashwp-modal__custom input {
+	flex: 1;
+	min-width: 140px;
+}
+
+body.dashwp-modal-open {
+	overflow: hidden;
+}
+
+@media screen and (max-width: 960px) {
+	.dashwp-layout {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.dashwp-row {
+		flex-wrap: wrap;
+	}
+
+	.dashwp-row__text {
+		flex-basis: calc(100% - 100px);
+	}
+
+	.dashwp-row__actions {
+		width: 100%;
+		justify-content: flex-end;
+	}
+
+	.dashwp-modal__grid {
+		grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+	}
+}

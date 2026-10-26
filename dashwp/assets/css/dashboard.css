@@ -1,0 +1,186 @@
+/* DashWP – dashboard grid & tiles */
+
+body.dashwp-dashboard #wpbody-content > *:not(.dashwp-wrap):not(.clear) {
+	display: none !important; /* anything plugins print outside the notice hooks */
+}
+
+.dashwp-wrap {
+	max-width: 1400px;
+}
+
+.dashwp-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	flex-wrap: wrap;
+	margin: 12px 0 24px;
+}
+
+.dashwp-wrap .dashwp-heading {
+	margin: 0;
+	padding: 0;
+	font-size: 26px;
+	font-weight: 600;
+	line-height: 1.3;
+}
+
+.dashwp-subtitle {
+	margin: 6px 0 0;
+	color: #50575e;
+	font-size: 14px;
+}
+
+.dashwp-manage.button {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.dashwp-manage .dashicons {
+	font-size: 16px;
+	width: 16px;
+	height: 16px;
+}
+
+.dashwp-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+	gap: 18px;
+}
+
+.dashwp-tile {
+	--dashwp-color: #2271b1;
+	--dashwp-text: #fff;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+	min-height: 160px;
+	padding: 22px 16px;
+	box-sizing: border-box;
+	border-radius: 14px;
+	background: var(--dashwp-color);
+	background-image: linear-gradient(145deg, rgba(255, 255, 255, .18) 0%, rgba(255, 255, 255, 0) 55%, rgba(0, 0, 0, .12) 100%);
+	color: var(--dashwp-text);
+	text-align: center;
+	text-decoration: none;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .08), 0 4px 14px rgba(0, 0, 0, .08);
+	transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
+	overflow: hidden;
+	word-break: break-word;
+}
+
+a.dashwp-tile:hover,
+a.dashwp-tile:focus {
+	color: var(--dashwp-text);
+	transform: translateY(-3px);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 10px 24px rgba(0, 0, 0, .14);
+	filter: saturate(1.08);
+}
+
+a.dashwp-tile:focus-visible {
+	outline: 3px solid #1d2327;
+	outline-offset: 3px;
+}
+
+.dashwp-tile__icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, .2);
+	font-size: 30px;
+	line-height: 1;
+}
+
+.dashwp-tile__icon .dashicons,
+.dashwp-tile__icon .dashicons:before {
+	width: 34px;
+	height: 34px;
+	font-size: 34px;
+	line-height: 1;
+}
+
+.dashwp-tile__title {
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1.35;
+}
+
+.dashwp-tile__desc {
+	margin-top: -6px;
+	font-size: 12.5px;
+	line-height: 1.4;
+	opacity: .85;
+}
+
+.dashwp-empty {
+	padding: 48px 20px;
+	border: 2px dashed #c3c4c7;
+	border-radius: 14px;
+	text-align: center;
+	color: #50575e;
+}
+
+.dashwp-empty .dashicons {
+	width: 48px;
+	height: 48px;
+	font-size: 48px;
+	color: #a7aaad;
+}
+
+.dashwp-empty p {
+	font-size: 15px;
+}
+
+@media screen and (max-width: 782px) {
+	.dashwp-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 12px;
+	}
+
+	.dashwp-tile {
+		min-height: 130px;
+		padding: 16px 10px;
+		gap: 10px;
+		border-radius: 12px;
+	}
+
+	.dashwp-tile__icon {
+		width: 52px;
+		height: 52px;
+		font-size: 24px;
+	}
+
+	.dashwp-tile__icon .dashicons,
+	.dashwp-tile__icon .dashicons:before {
+		width: 28px;
+		height: 28px;
+		font-size: 28px;
+	}
+
+	.dashwp-tile__title {
+		font-size: 14px;
+	}
+
+	.dashwp-wrap .dashwp-heading {
+		font-size: 22px;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.dashwp-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.dashwp-tile {
+		transition: none;
+	}
+}
